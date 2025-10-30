@@ -1,7 +1,6 @@
 import pytest
 from playwright.sync_api import  Page, Playwright, expect
 
-pytest.mark.usefixtures('initialize_browser_state')
 def test_empty_courses_list(chromium_page_with_state) -> Page:
 
     chromium_page_with_state.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
