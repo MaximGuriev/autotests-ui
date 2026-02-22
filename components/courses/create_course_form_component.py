@@ -4,6 +4,7 @@ from playwright.sync_api import Page, expect
 class CreateCourseFormComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
+
         self.title_input = page.get_by_test_id('create-course-form-title-input').locator('input')
         self.estimated_time_input = page.get_by_test_id(
             'create-course-form-estimated-time-input').locator('input')
@@ -45,7 +46,7 @@ class CreateCourseFormComponent(BaseComponent):
             min_score: str
     ):
         self.title_input.fill(title)
-        expect(self.create_course_title_input).to_have_value(title)
+        expect(self.title_input).to_have_value(title)
 
         self.estimated_time_input.fill(estimated_time)
         expect(self.estimated_time_input).to_have_value(estimated_time)
