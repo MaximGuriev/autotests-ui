@@ -25,19 +25,20 @@ def test_create_course(courses_list_page: CoursesListPage, create_course_page: C
     create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
     create_course_page.check_visible_create_course_title()
     create_course_page.check_disable_create_course_button()
-    #create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
-    #create_course_page.create_course_form_component.check_visible('', '', '', '0', '0')
-    #create_course_page.create_course_toolbar.check_visible()
-    #create_course_page.create_course_toolbar.click_create_exercise_button()
-    #create_course_page.check_visible_exercises_empty_view()
+    create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
+    create_course_page.create_course_form_component.check_visible('', '', '', '0', '0')
+    create_course_page.create_course_toolbar.check_visible()
+    create_course_page.check_visible_exercises_empty_view()
+    create_course_page.create_course_toolbar.click_create_exercise_button()
 
-    #create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
-    #create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
 
-    #create_course_page.create_course_form_component.fill(title="Playwright", estimated_time="2 weeks", description="Playwright",
-    #                                           max_score="100", min_score="10")
-    #create_course_page.click_create_course_button()
+    create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
+    create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
 
-    #courses_list_page.toolbar_view.check_visible()
-    #courses_list_page.course_view.check_visible(index=0, title="Playwright", max_score="100", min_score="10",
-    #                                            estimated_time="2 weeks")
+    create_course_page.create_course_form_component.fill(title="Playwright", estimated_time="2 weeks", description="Playwright",
+                                               max_score="100", min_score="10")
+    create_course_page.click_create_course_button()
+
+    courses_list_page.toolbar_view.check_visible()
+    courses_list_page.course_view.check_visible(index=0, title="Playwright", max_score="100", min_score="10",
+                                                estimated_time="2 weeks")
