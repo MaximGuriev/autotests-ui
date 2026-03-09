@@ -8,14 +8,18 @@ from elements.text import Text
 class CreateCourseToolbarViewComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
-        self.create_exercise_button = Button(page,'create-course-exercises-box-toolbar-create-exercise-button', 'Button')
-        self.exercises_title = Text(page, 'create-course-exercises-box-toolbar-title-text', 'Title')
+
+        self.exercises_title = Text(page, 'courses-list-toolbar-title-text', 'Title')
+        self.create_exercise_button = Button(page,'courses-list-toolbar-create-course-button', 'Button')
 
 
+    def check_visible(self, is_create_course_disabled: bool = True):
+        if is_create_course_disabled:
+            self.create_exercise_button.check_enabled()
 
-    def check_visible(self):
-        self.exercises_title.check_visible()
-        self.exercises_title.check_have_text('Exercises')
+        if not is_create_course_disabled:
+            self.create_exercise_button.check_disabled()
+
 
     def click_create_course_button(self):
         self.create_exercise_button.check_visible()
