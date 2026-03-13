@@ -9,8 +9,8 @@ class CreateCourseToolbarViewComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
 
-        self.exercises_title = Text(page, 'courses-list-toolbar-title-text', 'Title')
-        self.create_exercise_button = Button(page,'courses-list-toolbar-create-course-button', 'Button')
+        self.exercises_title = Text(page, 'create-course-toolbar-title-text', 'Title')
+        self.create_exercise_button = Button(page,'create-course-toolbar-create-course-button', 'Button')
 
 
     def check_visible(self, is_create_course_disabled: bool = True):

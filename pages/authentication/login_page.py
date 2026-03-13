@@ -1,9 +1,13 @@
+import re
+
 from components.authentication.login_form_component import LoginFromComponent
 from elements.button import Button
 from elements.link import Link
 from elements.text import Text
 from pages.base_page import BasePage
 from playwright.sync_api import Page, expect
+
+from typing import Pattern
 
 from playwright_hover import registration_link
 
@@ -20,6 +24,7 @@ class LoginPage(BasePage):
 
     def click_login_button(self):
         self.login_button.click()
+        self.check_current_url(re.compile(".*/#/auth/registration"))
 
     def click_registration_link(self):
         self.registration_link.click()
