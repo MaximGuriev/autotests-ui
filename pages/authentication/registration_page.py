@@ -22,7 +22,6 @@ class RegistrationPage(BasePage):
         self.dashboard_title = Text(page, 'dashboard-toolbar-title-text', 'Title')#page.get_by_test_id('dashboard-toolbar-title-text')
 
 
-
     def click_registration_button(self):
         self.registration_button.click()
 

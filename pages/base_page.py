@@ -2,8 +2,7 @@ from playwright.sync_api import Page, expect
 from typing import Pattern
 
 
-def expect(page):
-    pass
+
 
 
 class BasePage:
