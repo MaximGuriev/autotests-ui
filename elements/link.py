@@ -2,4 +2,6 @@ from elements.base_elements import BaseElement
 
 
 class Link(BaseElement):
-    pass
+    @property
+    def type_of(self) -> str:
+        return "link"

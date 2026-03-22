@@ -1,7 +1,6 @@
 import pytest
 from playwright.sync_api import Page, Playwright
 
-from fixtures.pages import registration_page
 from pages.authentication.registration_page import RegistrationPage
 
 
@@ -10,7 +9,7 @@ def chromium_page(playwright: Playwright) -> Page:
     # Открываем браузер Chromium (не в headless режиме, чтобы видеть действия)
     browser = playwright.chromium.launch(headless=False)
     yield browser.new_page()  # Создаем новую страницу
-
+    browser.close()
 
 @pytest.fixture(scope="session")
 def initialize_browser_state(playwright: Playwright) -> Page:

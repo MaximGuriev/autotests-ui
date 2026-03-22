@@ -14,12 +14,9 @@ class CoursesListPage(BasePage):
 
         self.empty_view = EmptyViewComponent(page, 'courses-list')
         self.course_view = CourseViewComponent(page)
-
         self.navbar = NavbarComponent(page)
         self.sidebar = SidebarComponent(page)
-
         self.toolbar_view = CoursesListViewToolbarComponent(page)
-
         self.course_view_menu_component = CourseViewMenuComponent(page)
 
 
