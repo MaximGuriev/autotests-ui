@@ -5,7 +5,7 @@ import allure
 class Input(BaseElement):
     @property
     def type_of(self) -> str:
-        return "input"
+        return "input 1"
 
     def get_locator(self, nth: int = 0, **kwargs) -> Locator:
         return super().get_locator(nth, **kwargs).locator('input')
