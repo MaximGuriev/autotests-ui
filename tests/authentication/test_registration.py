@@ -7,7 +7,7 @@ from tools.allure.epics import AllureEpic
 from tools.allure.stories import AllureStory
 from tools.allure.features import AllureFeature
 from allure_commons.types import Severity
-
+from tools.routes import AppRoute
 
 import pytest
 import allure
@@ -28,7 +28,7 @@ class TestRegistration:
     @allure.severity(Severity.CRITICAL)
     def test_successful_registration(self, dashboard_page: DashboardPage, registration_page: RegistrationPage, email: str,
                                      username: str, password: str):
-        registration_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
+        registration_page.visit(AppRoute.REGISTRATION)
         registration_page.registration_page_component.fill(email=email, username=username, password=password)
         registration_page.registration_page_component.check_visible(email=email, username=username, password=password)
         registration_page.click_registration_button()
