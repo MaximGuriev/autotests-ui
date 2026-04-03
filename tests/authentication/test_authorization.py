@@ -49,7 +49,7 @@ class TestAuthorization:
 
 
 
-
+    @pytest.mark.xdist_group(name="authorization-group")
     @pytest.mark.parametrize('email, password', [("user.name@gmail.com", "password"),
                                                  ("user.name@gmail.com", "  "),
                                                  ("  ", "password")])
