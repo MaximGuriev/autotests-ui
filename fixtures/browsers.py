@@ -19,7 +19,7 @@ def page(request: SubRequest, playwright: Playwright) -> Page:
 
 
 @pytest.fixture(scope="session")
-def initialize_browser_state(playwright: Playwright) -> Page:
+def initialize_browser_state(playwright: Playwright):
     # Открываем браузер Chromium (не в headless режиме, чтобы видеть действия)
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context(base_url=settings.get_base_url())
