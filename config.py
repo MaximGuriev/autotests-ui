@@ -3,6 +3,7 @@ from pydantic import EmailStr, FilePath, HttpUrl, DirectoryPath, BaseModel
 from enum import Enum
 from typing import Self
 
+
 class Browser(str, Enum):
     WEBKIT = "webkit"
     FIREFOX = "firefox"
@@ -15,6 +16,7 @@ class TestUser(BaseModel):
 
 class TestData(BaseModel):
     image_png_file: FilePath
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
