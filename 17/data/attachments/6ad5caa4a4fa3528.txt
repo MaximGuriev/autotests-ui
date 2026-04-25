@@ -1,0 +1,25 @@
+INFO     BASE_PAGE:base_page.py:17 Opening the url "AppRoute.REGISTRATION"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-email-input"at index "0"
+INFO     INPUT:input.py:21 Fill input 1 "Email" to value "user.name@gmail.com"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-username-input"at index "0"
+INFO     INPUT:input.py:21 Fill input 1 "Username" to value "username"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-password-input"at index "0"
+INFO     INPUT:input.py:21 Fill input 1 "Password" to value "password"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-email-input"at index "0"
+INFO     BASE_ELEMENT:base_elements.py:37 Checking that input 1 "Email" is visible
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-email-input"at index "0"
+INFO     INPUT:input.py:28 Checking that input 1 "Email" have a value "user.name@gmail.com"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-username-input"at index "0"
+INFO     BASE_ELEMENT:base_elements.py:37 Checking that input 1 "Username" is visible
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-username-input"at index "0"
+INFO     INPUT:input.py:28 Checking that input 1 "Username" have a value "username"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-password-input"at index "0"
+INFO     BASE_ELEMENT:base_elements.py:37 Checking that input 1 "Password" is visible
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-form-password-input"at index "0"
+INFO     INPUT:input.py:28 Checking that input 1 "Password" have a value "password"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=registration-page-registration-button"at index "0"
+INFO     BASE_ELEMENT:base_elements.py:29 Clicking button "Registration button"
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=dashboard-toolbar-title-text"at index "0"
+INFO     BASE_ELEMENT:base_elements.py:37 Checking that text "Dashboard title" is visible
+INFO     BASE_ELEMENT:base_elements.py:22 Getting locator with "data-testid=dashboard-toolbar-title-text"at index "0"
+INFO     BASE_ELEMENT:base_elements.py:44 Checking that text "Dashboard title" has text "Dashboard"
