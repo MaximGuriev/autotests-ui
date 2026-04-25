@@ -48,11 +48,12 @@ jobs:
           allure_history: allure-history
 
       - name: Deploy report to Github Pages
-        uses: peaceiris/actions-gh-pages@v4
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PERSONAL_BRANCH: gh-pages
-          PERSONAL_DIR: allure-history
+        if: always()  # Выполняется всегда, независимо от успеха других шагов
+        uses: peaceiris/actions-gh-pages@v4  # Используем GitHub Action для публикации отчёта на GitHub Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Токен для аутентификации на GitHub
+          publish_branch: gh-pages  # Указываем, что отчёт будет опубликован в ветке gh-pages
+          publish_dir: allure-history  # Указываем папку, которая будет опубликована на GitHub Pages
 
 
 
